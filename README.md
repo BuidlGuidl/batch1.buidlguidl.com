@@ -27,7 +27,7 @@ Here's what you'll be doing :
 2. Next, you'll complete [Issue #9](https://github.com/BuidlGuidl/batch1.buidlguidl.com/issues/9) and 'check in' to our smart contract by writing a contract of your own.
 3. After that you'll move to [Issue #8](https://github.com/BuidlGuidl/batch1.buidlguidl.com/issues/8) and create a personal page and use a pull request(PR) to send it to the batch repo.
 4. From there you will start choosing other open issues to work on, either on your own or in collaboration with other batch members.
-5. The final step is a full dApp chosen and created by the batch! (We will provide ideas on projects you can take on)
+5. The final step is building a full dApp with other members of the batch or on your own! (We will provide ideas on projects you can take on)
 
 We aim to empower you with the skills of dApp development and collaborating with developers, and we will be with you every step of the way.
 
@@ -37,7 +37,7 @@ First, since our contract is deployed to the Optimism chain, you will want to ma
 
 Then you will head to the open Introductions discussion in your batch's GitHub repo and make a post introducing yourself.  Also feel free to introduce yourself in the batch Telegram channel as well if you want.
 
-Next head to the Issues tab of your batch's Github repo.  Once you complete Issue #1, move on to Issue #2.  Everyone will complete the first two issues on their own, then can start taking on the other issues.  Work and collaborate with your batch members in both Github and Telegram for a real-world experience.  If you're working on an issue, looking to collaborate on an issue, or want feedback on an issue or pull request, shout out to your batch!
+Next head to the Issues tab of your batch's Github repo.  Once you complete the [first issue](https://github.com/BuidlGuidl/batch1.buidlguidl.com/issues/9), move on to [the next](https://github.com/BuidlGuidl/batch1.buidlguidl.com/issues/8).  Everyone will complete the first two issues on their own, then you can start taking on the other issues.  Work and collaborate with your batch members in both Github and Telegram for a real-world experience.  If you're working on an issue, looking to collaborate on an issue, or want feedback on an issue or pull request, shout out to your batch!
 
 > 😲 Github can seem daunting! Take a look at our detailed guide on the "Fork and Pull" Github process [here](https://gist.github.com/ZakGriffith/69d1eb8baebddd7d370b87a65a7e3ec0).
 
@@ -71,7 +71,9 @@ So if you want to take your GitHub skills to the next level, start actively enga
 
 ## Project Focus
 
-The final step in the batch will be a project where you will all collaborate on a full-scale dApp!  More information on this will become available from the mentors as the batch progresses.
+The final step in the batch will be a project where you will build a full-scale dApp & BuidlGuidl wants to fund your build with 0.25 ETH! You can work with members of this batch or on your own for the final project. Build something that you learn from, can possibly teach others, doesn't necessarily have to be a product or a big thing.
+
+You can learn more about the Final Project over [here](https://github.com/BuidlGuidl/batch1.buidlguidl.com/issues/2) and more information on this will become available from the mentors as the batch progresses.
 
 ## Useful Resources
 
