@@ -1,9 +1,24 @@
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { NextPage } from "next";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
+import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
+  const [checkinCounter, setCheckinCounter] = useState<number>();
+
+  const { data: checkinCounterData } = useScaffoldContractRead({
+    contractName: "BatchRegistry",
+    functionName: "checkedInCounter",
+  });
+
+  useEffect(() => {
+    if (checkinCounterData) {
+      setCheckinCounter(Number(checkinCounterData));
+    }
+  }, [checkinCounterData]);
+
   return (
     <>
       <MetaHeader />
@@ -16,7 +31,7 @@ const Home: NextPage = () => {
           <p className="text-center text-lg">Get started by taking a look at your batch GitHub repository.</p>
           <p className="text-lg flex gap-2 justify-center">
             <span className="font-bold">Checked in builders count:</span>
-            <span>To Be Implemented</span>
+            {checkinCounter && <span>{checkinCounter.toString()}</span>}
           </p>
         </div>
 
