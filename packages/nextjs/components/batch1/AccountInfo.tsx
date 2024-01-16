@@ -17,9 +17,6 @@ export default function AccountInfo() {
     args: [accountState.address],
   });
 
-  console.log(userContractAddressData);
-  console.log(userAllowlistData);
-
   return (
     <>
       {userAllowlistData !== undefined && userContractAddressData !== undefined && (
