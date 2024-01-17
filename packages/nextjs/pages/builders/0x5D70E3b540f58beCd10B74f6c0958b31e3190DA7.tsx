@@ -9,14 +9,14 @@ const BabacanBuilderProfile = () => {
       <div className="flex flex-col w-2/4">
         <p className="text-lg font-bold mb-5">Hey I&apos;m Oguzhan | babacan.eth</p>
         <p className="mb-4">
-          I&apos;m from Turkey that&apos;s why my name seems odd &lsquo;yeah I know I know 😁&rsquo;. It&apos;s hard to
-          pronounce it but let me give you a hint: it&apos;s resembling the word &ldquo;awesome&rdquo; 😎 but with
-          &apos;n&apos; instead of &apos;m&apos;.
+          I&apos;m from Turkey that&apos;s why my name seems odd (yeah I know I know 😁). It&apos;s hard to pronounce it
+          but let me give you a hint: it&apos;s resembling the word &ldquo;awesome&rdquo; 😎 but with &apos;n&apos;
+          instead of &apos;m&apos;.
         </p>
         <p>
-          Currently I&apos;ve been working as a C++ dev so I dont have much experience in web design or frontend.
-          I&apos;m in the learning phase of React and Javascript. Hope I&apos;ll be better in a couple of months
-          :&rsquo; I enjoy writing code, scuba-diving, and running.
+          Currently, I&apos;ve been working as a C++ dev so I dont have much experience in web design or frontend.
+          I&apos;m in the learning phase of React and Javascript. Hope I&apos;ll be better in a couple of months I enjoy
+          writing code, scuba-diving, and running.
         </p>
         <div className="flex flex-col bg-base-100 py-2 text-center items-center max-w-xs rounded-3xl">
           <p className="mb-4">You can reach out to me from:</p>
