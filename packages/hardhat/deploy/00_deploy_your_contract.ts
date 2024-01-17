@@ -32,7 +32,7 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     autoMine: true,
   });
 
-  // await hre.ethers.getContract<Contract>("YourContract", deployer);
+  // const batchRegistry = await hre.ethers.getContract<Contract>("BatchRegistry", deployer);
 };
 
 export default deployYourContract;
