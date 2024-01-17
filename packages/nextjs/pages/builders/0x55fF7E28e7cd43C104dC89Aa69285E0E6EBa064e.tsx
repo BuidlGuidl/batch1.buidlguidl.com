@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function yassirakhBuilderPage() {
+const YassirakhBuilderPage = () => {
   return (
     <div className="flex flex-col items-center w-100 mt-4 text-center">
       <Image className="rounded-3xl flex" src="/yassirakh.jpg" alt="yassirakh.eth image" width={200} height={200} />
@@ -20,4 +20,6 @@ export default function yassirakhBuilderPage() {
       </div>
     </div>
   );
-}
+};
+
+export default YassirakhBuilderPage;
