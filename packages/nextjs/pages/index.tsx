@@ -5,7 +5,7 @@ import { MetaHeader } from "~~/components/MetaHeader";
 import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
-  const { data: ctr } = useScaffoldContractRead({
+  const { data: checkInCounter, isLoading: isCounterLoading } = useScaffoldContractRead({
     contractName: "BatchRegistry",
     functionName: "checkedInCounter",
   });
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
           <p className="text-center text-lg">Get started by taking a look at your batch GitHub repository.</p>
           <p className="text-lg flex gap-2 justify-center">
             <span className="font-bold">Checked in builders count:</span>
-            <span>{ctr ? Number(ctr) : 0}</span>
+            <span>{isCounterLoading ? "Loading..." : checkInCounter?.toString()}</span>
           </p>
         </div>
 
