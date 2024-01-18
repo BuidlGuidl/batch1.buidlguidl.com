@@ -44,11 +44,13 @@ const PapaWheelie = () => {
       <div className="mx-auto max-w-3xl rounded-md shadow-2xl shadow-indigo-500/40 md:shadow-indigo-500/40 md:shadow-2xl">
         <div className="flex flex-col md:flex-row items-center items-stretch justify-center gap-4">
           <div className="md:w-1/3 flex justify-center md:justify-start">
-            <img
-              className="rounded-full w-1/2 h-1/2 md:h-full md:w-full md:object-cover md:rounded-l-md md:rounded-r-none"
-              src={ensData["avatar"] ?? "https://i.imgur.com/UhV7H97.jpeg"}
-              alt={ensData["name"] ?? "Loading..."}
-            />
+            <picture>
+              <img
+                className="rounded-full w-1/2 h-1/2 md:h-full md:w-full md:object-cover md:rounded-l-md md:rounded-r-none"
+                src={ensData["avatar"] ?? "https://i.imgur.com/UhV7H97.jpeg"}
+                alt={ensData["name"] ?? "Loading..."}
+              />
+            </picture>
           </div>
           <div className="md:w-2/3 flex flex-col justify-between p-8">
             <div className="text-center md:text-start divide-y divide-solid divide-slate-500/30">
