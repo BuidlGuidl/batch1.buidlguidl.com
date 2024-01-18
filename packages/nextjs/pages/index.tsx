@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { NextPage } from "next";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
@@ -10,8 +11,11 @@ const Home: NextPage = () => {
       <div className="flex items-center flex-col flex-grow pt-10">
         <div className="px-5">
           <h1 className="text-center mb-8">
-            <span className="block text-2xl mb-2">Welcome to</span>
-            <span className="block text-4xl font-bold">Batch 1</span>
+            <span className="block text-4xl font-bold mb-5">Batch 1</span>
+            <div className="flex items-center flex-col">
+              <Image width={200} height={200} src="/batch1_logo.png" alt="Batch1_Logo" className="mb-2 rounded-full" />
+            </div>
+            <span className="block text-2xl mb-2">Community driven by Web3 Buidling</span>
           </h1>
           <p className="text-center text-lg">Get started by taking a look at your batch GitHub repository.</p>
           <p className="text-lg flex gap-2 justify-center">
