@@ -2,7 +2,7 @@ import { useAccount } from "wagmi";
 import { CheckBadgeIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
 
-export default function AccountInfo() {
+const AccountInfo = () => {
   const accountState = useAccount();
 
   const { data: userContractAddressData } = useScaffoldContractRead({
@@ -47,4 +47,6 @@ export default function AccountInfo() {
       )}
     </>
   );
-}
+};
+
+export default AccountInfo;
