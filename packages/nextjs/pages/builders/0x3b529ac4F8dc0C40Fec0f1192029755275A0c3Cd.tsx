@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function KavirajProfilePage() {
+const KavirajProfilePage = () => {
   const profileImage = "/kaviraj.jpg";
   const bio =
     "Hi my name is Kaviraj (kaviraj.eth) I'm a computer science student who builds web applications and interested in web3 space :)";
@@ -11,7 +11,7 @@ export default function KavirajProfilePage() {
   ];
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 py-4">
       <div className="flex items-center justify-center mb-8">
         <Image src={profileImage} alt="Kaviraj Avatar" width={200} height={200} className="rounded-full shadow-md" />
       </div>
@@ -34,4 +34,6 @@ export default function KavirajProfilePage() {
       </div>
     </div>
   );
-}
+};
+
+export default KavirajProfilePage;
