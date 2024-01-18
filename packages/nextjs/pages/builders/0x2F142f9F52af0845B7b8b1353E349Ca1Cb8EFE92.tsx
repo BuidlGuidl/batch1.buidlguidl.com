@@ -42,11 +42,11 @@ const PapaWheelie = () => {
   return (
     <div className="flex h-lvh flex-grow items-center justify-center px-4">
       <div className="mx-auto max-w-3xl rounded-md shadow-2xl shadow-indigo-500/40 md:shadow-indigo-500/40 md:shadow-2xl">
-        <div className="flex flex-col md:flex-row items-center items-stretch justify-center gap-4">
+        <div className="flex flex-col md:flex-row items-stretch justify-center gap-4">
           <div className="md:w-1/3 flex justify-center md:justify-start">
             <picture>
               <img
-                className="rounded-full w-1/2 h-1/2 md:h-full md:w-full md:object-cover md:rounded-l-md md:rounded-r-none"
+                className="rounded-md h-fit w-1/2 md:h-full md:w-full mx-auto md:object-cover md:rounded-l-md md:rounded-r-none"
                 src={ensData["avatar"] ?? "https://i.imgur.com/UhV7H97.jpeg"}
                 alt={ensData["name"] ?? "Loading..."}
               />
