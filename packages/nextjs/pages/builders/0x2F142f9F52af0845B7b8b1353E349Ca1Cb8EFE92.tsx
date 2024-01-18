@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { appChains } from "~~/services/web3/wagmiConnectors";
 
-export default function PapaWheelie() {
+const PapaWheelie = () => {
   const [ensData, setEnsData] = useState<Record<string, string | undefined>>({});
   const nameTitle = "P A P A W H E E L I E";
   const ensName = "papawheelie.eth";
@@ -61,23 +61,27 @@ export default function PapaWheelie() {
             <div className="flex flex-wrap justify-between items-end">
               <Link
                 href={ensData["com.twitter"] ?? "#"}
+                target="_blank"
                 className="bg-blue-400 hover:bg-blue-400/50 text-white p-2 rounded"
               >
                 Twitter
               </Link>
               <Link
                 href={ensData["com.github"] ?? "Loading..."}
+                target="_blank"
                 className="bg-[#000] hover:bg-[#000]/50 text-white p-2 rounded"
               >
                 Github
               </Link>
               <Link
                 href={ensData["com.youtube"] ?? "Loading..."}
+                target="_blank"
                 className="bg-[#FF0000] hover:bg-[#ff0000]/50 text-white p-2 rounded"
               >
                 Youtube
               </Link>
               <Link
+                target="_blank"
                 href={ensData["com.discord"] ?? "Loading..."}
                 className="bg-[#5865F2] hover:bg-[#5865F2]/50 text-white p-2 rounded"
               >
@@ -89,4 +93,6 @@ export default function PapaWheelie() {
       </div>
     </div>
   );
-}
+};
+
+export default PapaWheelie;
