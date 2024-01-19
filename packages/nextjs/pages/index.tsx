@@ -1,13 +1,28 @@
 import Link from "next/link";
 import type { NextPage } from "next";
+import { useAccount } from "wagmi";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
 import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
+  const accountState = useAccount();
+
   const { data: checkInCounter, isLoading: isCounterLoading } = useScaffoldContractRead({
     contractName: "BatchRegistry",
     functionName: "checkedInCounter",
+  });
+
+  const { data: allowList, isLoading: isAllowListLoading } = useScaffoldContractRead({
+    contractName: "BatchRegistry",
+    functionName: "allowList",
+    args: [accountState.address],
+  });
+
+  const { data: contractList } = useScaffoldContractRead({
+    contractName: "BatchRegistry",
+    functionName: "yourContractAddress",
+    args: [accountState.address],
   });
 
   return (
@@ -20,6 +35,20 @@ const Home: NextPage = () => {
             <span className="block text-4xl font-bold">Batch 1</span>
           </h1>
           <p className="text-center text-lg">Get started by taking a look at your batch GitHub repository.</p>
+          <p className="text-lg flex gap-2 justify-center">
+            <span className="font-bold">Connected wallet status:</span>
+            <span>{allowList?.toString()}</span>
+          </p>
+          <p className="text-lg flex gap-2 justify-center">
+            <span className="font-bold">Connected wallet check-in status:</span>
+            <span>
+              {isAllowListLoading
+                ? "Loading..."
+                : contractList === "0x0000000000000000000000000000000000000000"
+                ? "Not checked-in"
+                : "Checked-in"}
+            </span>
+          </p>
           <p className="text-lg flex gap-2 justify-center">
             <span className="font-bold">Checked in builders count:</span>
             <span>{isCounterLoading ? "Loading..." : checkInCounter?.toString()}</span>
