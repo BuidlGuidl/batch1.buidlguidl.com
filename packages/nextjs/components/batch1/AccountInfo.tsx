@@ -23,7 +23,7 @@ const AccountInfo = () => {
 
   return (
     <>
-      <div className="py-2 px-5 ml-4 rounded-2xl text-sm font-semibold bg-[#DAE8FF]">
+      <div className="py-2 px-5 ml-4 rounded-2xl text-sm font-semibold bg-secondary">
         <div>
           <div className="flex flex-row content-center">
             AllowListed{" "}
