@@ -1,6 +1,5 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
-// import { Contract } from "ethers";
 
 /**
  * Deploys a contract named "deployYourContract" using the deployer account and
@@ -22,21 +21,30 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  await deploy("BatchRegistry", {
+  // Deploy BatchRegistry contract first
+  const batchRegistryDeployment = await deploy("BatchRegistry", {
     from: deployer,
-    // Contract constructor arguments
-    args: [deployer],
+    args: [deployer], // Adjust constructor arguments if needed
     log: true,
-    // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
-    // automatically mining the contract deployment transaction. There is no effect on live networks.
     autoMine: true,
+    skipIfAlreadyDeployed: true,
   });
 
-  // const batchRegistry = await hre.ethers.getContract<Contract>("BatchRegistry", deployer);
+  const batchRegistryAddress = batchRegistryDeployment.address;
+
+  await deploy("CheckIn", {
+    from: deployer,
+    args: [batchRegistryAddress], // Pass the BatchRegistry address as a constructor argument
+    log: true,
+    autoMine: true,
+    //skipIfAlreadyDeployed: !hre.network.live,
+  });
+  // const CheckIn = await hre.ethers.getContract("CheckIn", deployer);
+  console.log("CheckIn deployed to:", (await hre.deployments.get("CheckIn")).address);
 };
 
 export default deployYourContract;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
 // e.g. yarn deploy --tags YourContract
-deployYourContract.tags = ["BatchRegistry"];
+deployYourContract.tags = ["CheckIn"];
