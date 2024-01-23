@@ -23,7 +23,7 @@ const AccountInfo = () => {
 
   return (
     <>
-      <div className="rounded-xl text-xs space-y ml-2">
+      <div className="text-xs space-y ml-2">
         <div>
           <div className="flex justify-between items-center">
             AllowListed{" "}
