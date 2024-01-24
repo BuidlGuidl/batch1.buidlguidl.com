@@ -29,7 +29,7 @@ export const MetaHeader = ({
         <>
           <title>{title}</title>
           <meta property="og:title" content={title} />
-          <meta property="twiter:title" content={title} />
+          <meta name="twiter:title" content={title} />
         </>
       )}
       {description && (
