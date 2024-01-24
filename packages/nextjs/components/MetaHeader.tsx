@@ -14,9 +14,9 @@ type MetaHeaderProps = {
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/` : "/";
 
 export const MetaHeader = ({
-  title = "Scaffold-ETH 2 App",
-  description = "Built with 🏗 Scaffold-ETH 2",
-  image = "thumbnail.jpg",
+  title = "BuidlGuidl Batch#1 Buidlers Page",
+  description = "First dApp project built with the contributions of batch #1 members and supervised by the BuidlGuidl mentors. Stay with 🏗 Scaffold-ETH 2!",
+  image = "batch1_logo.png",
   twitterCard = "summary_large_image",
   children,
 }: MetaHeaderProps) => {
@@ -24,11 +24,12 @@ export const MetaHeader = ({
 
   return (
     <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {title && (
         <>
           <title>{title}</title>
           <meta property="og:title" content={title} />
-          <meta name="twitter:title" content={title} />
+          <meta property="twiter:title" content={title} />
         </>
       )}
       {description && (
@@ -41,10 +42,15 @@ export const MetaHeader = ({
       {image && (
         <>
           <meta property="og:image" content={imageUrl} />
+          <meta property="og:image:height" content="200" />
+          <meta property="og:image:width" content="300" />
           <meta name="twitter:image" content={imageUrl} />
         </>
       )}
       {twitterCard && <meta name="twitter:card" content={twitterCard} />}
+      <meta property="og:url" content="https://batch1.buidlguidl.com/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="BuidlGuidl Batch#1" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
       {children}
     </Head>
