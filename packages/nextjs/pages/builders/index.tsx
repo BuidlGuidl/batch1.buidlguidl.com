@@ -11,7 +11,7 @@ const BuilderPage: NextPage = () => {
   } = useScaffoldEventHistory({
     contractName: "BatchRegistry",
     eventName: "CheckedIn",
-    fromBlock: 0n,
+    fromBlock: 114830037n,
   });
 
   const firstTimeCheckInEvents = eventData?.filter(({ args: { first } }) => first);
