@@ -23,24 +23,24 @@ const AccountInfo = () => {
 
   return (
     <>
-      <div className="py-2 px-5 ml-4 rounded-2xl text-sm font-semibold bg-[#DAE8FF]">
+      <div className="text-xs space-y ml-2">
         <div>
-          <div className="flex flex-row content-center">
+          <div className="flex justify-between items-center">
             AllowListed{" "}
             {userAllowlistData ? (
-              <CheckBadgeIcon className="ml-1" color="green" width={20} />
+              <CheckBadgeIcon className="stroke-success" width={16} />
             ) : (
-              <XMarkIcon className="ml-1" color="red" width={20} />
+              <XMarkIcon className="stroke-error" width={16} />
             )}
           </div>
         </div>
         <div>
-          <div className="flex flex-row content-center">
+          <div className="flex justify-between items-center">
             Checked in{" "}
             {userContractAddressData != "0x0000000000000000000000000000000000000000" ? (
-              <CheckBadgeIcon className="ml-1" color="green" width={20} />
+              <CheckBadgeIcon className="stroke-success" width={16} />
             ) : (
-              <XMarkIcon className="ml-1" color="red" width={20} />
+              <XMarkIcon className="stroke-error" width={16} />
             )}
           </div>
         </div>
