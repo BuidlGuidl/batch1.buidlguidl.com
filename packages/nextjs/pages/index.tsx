@@ -38,7 +38,15 @@ const Home: NextPage = () => {
             <span className="block text-4xl font-bold">Buidl Guidl Batch 1</span>
             <div className="flex items-center flex-col">
               <br></br>
-              <Image width={500} height={300} src="/batch1.jpg" alt="Batch1_Logo" className="mb-2 rounded-full" />
+              <Image
+                width={0}
+                height={0}
+                sizes="110vh"
+                style={{ width: "auto", height: "10%" }}
+                src="/batch1.jpg"
+                alt="Batch1_Logo"
+                className="mb-2 rounded-full"
+              />
             </div>
           </h1>
           <p className="text-center text-lg">Get started by taking a look at your batch GitHub repository.</p>
