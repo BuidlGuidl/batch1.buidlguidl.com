@@ -1,6 +1,6 @@
 import { ISourceOptions } from "tsparticles-engine";
 
-const options: ISourceOptions = {
+export const options: ISourceOptions = {
   fullScreen: {
     enable: true,
     zIndex: 0,
@@ -118,4 +118,4 @@ const options: ISourceOptions = {
   },
   retina_detect: true,
 };
-export default { options };
+//export default { options };

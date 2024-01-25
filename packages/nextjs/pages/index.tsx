@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import particlesTSX from "../components/particleOptionsTSX";
+import { options } from "../components/particleOptionsTSX";
 import type { NextPage } from "next";
 import Particles from "react-tsparticles";
-import type { Engine, ISourceOptions } from "tsparticles-engine";
+import type { Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
@@ -27,12 +27,10 @@ const Home: NextPage = () => {
     return result;
   };
 
-  const opt: ISourceOptions = particlesTSX.options;
-
   return (
     <>
       <MetaHeader />
-      <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={opt} />
+      <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={options} />
       <div className="flex items-center flex-col flex-grow pt-10" style={{ zIndex: 1 }}>
         <div className="px-5">
           <h1 className="text-center mb-8">
