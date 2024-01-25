@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import particlesTSX from "../components/particleOptionsTSX";
 import type { NextPage } from "next";
+import Particles from "react-tsparticles";
+import type { Engine, ISourceOptions } from "tsparticles-engine";
+import { loadSlim } from "tsparticles-slim";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
 import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
@@ -11,10 +15,25 @@ const Home: NextPage = () => {
     functionName: "checkedInCounter",
   });
 
+  type pInit = (engine: Engine) => Promise<void>;
+  const particlesInit: pInit = async engine => {
+    const result = await loadSlim(engine);
+    return result;
+  };
+
+  type pLoad = (container: any) => Promise<void>;
+  const particlesLoaded: pLoad = async container => {
+    const result = await console.log(container);
+    return result;
+  };
+
+  const opt: ISourceOptions = particlesTSX.options;
+
   return (
     <>
       <MetaHeader />
-      <div className="flex items-center flex-col flex-grow pt-10">
+      <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={opt} />
+      <div className="flex items-center flex-col flex-grow pt-10" style={{ zIndex: 1 }}>
         <div className="px-5">
           <h1 className="text-center mb-8">
             <span className="block text-4xl font-bold mb-5">Batch 1</span>

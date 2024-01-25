@@ -5,6 +5,7 @@
 :root,
 [data-theme] {
   background: oklch(var(--b2));
+  z-index: -1;
 }
 
 body {
