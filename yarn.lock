@@ -2006,6 +2006,7 @@ __metadata:
     type-fest: ^4.6.0
     typescript: ^5.1.6
     typewriter-effect: ^2.21.0
+    update-browserslist-db: latest
     use-debounce: ^8.0.4
     usehooks-ts: ^2.7.2
     vercel: ^28.15.1
@@ -12219,7 +12220,6 @@ __metadata:
   dependencies:
     husky: ^8.0.1
     lint-staged: ^13.0.3
-    update-browserslist-db: latest
   languageName: unknown
   linkType: soft
 
