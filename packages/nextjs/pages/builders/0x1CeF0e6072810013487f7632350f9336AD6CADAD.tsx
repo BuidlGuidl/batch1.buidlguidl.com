@@ -22,34 +22,34 @@ const RhProfilePage: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className=" w-screen px-60">
-        <div className="grid grid-cols-3 justify-center items-center gap-12 sm:flex-row">
+      <div className=" w-screen px-60 sm:px-60">
+        <div className=" flex justify-center items-center gap-12 sm:flex-row">
           <a
             href="https://github.com/PrintRH"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="transition ease-in-out hover:bg-indigo-500 duration-300 flex bg-gray-950 px-5 py-5 text-center items-center rounded-3xl cursor-pointer hover:bg-base-300"
+            className=" flex-auto transition ease-in-out hover:bg-indigo-500 duration-300 flex bg-gray-950 px-5 py-5 text-center items-center rounded-3xl cursor-pointer hover:bg-base-300"
           >
-            <CodeBracketSquareIcon className=" h-5 w-5 fill-secondary" />
-            <span className="ml-2 text-white"> GitHub </span>
+            <CodeBracketSquareIcon className=" flex-auto h-5 w-5 fill-secondary" />
+            <span className="flex-auto ml-2 text-sm sm:text-base text-white"> GitHub </span>
           </a>
           <a
             href="https://twitter.com/RH3th"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="transition ease-in-out hover:bg-indigo-500 duration-300 flex bg-sky-500/50 px-5 py-5 text-center items-center rounded-3xl cursor-pointer hover:bg-base-300"
+            className="flex-auto transition ease-in-out hover:bg-indigo-500 duration-300 flex bg-sky-500/50 px-5 py-5 text-center items-center rounded-3xl cursor-pointer hover:bg-base-300"
           >
-            <XMarkIcon className="h-5 w-5 item-center" />
-            <span className="ml-2 text-white">X Profile</span>
+            <XMarkIcon className="flex-auto h-5 w-5 item-center" />
+            <span className="flex-auto ml-2 text-sm sm:text-base text-white">Profile</span>
           </a>
           <a
             href="https://rhdev.substack.com/"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className=" transition ease-in-out hover:bg-indigo-500 duration-300 flex bg-amber-800 px-5 py-5 text-center items-center rounded-3xl cursor-pointer hover:bg-base-300"
+            className=" flex-auto transition ease-in-out hover:bg-indigo-500 duration-300 flex bg-amber-800 px-5 py-5 text-center items-center rounded-3xl cursor-pointer hover:bg-base-300"
           >
-            <BookOpenIcon className="h-5 w-5 item-center" />
-            <span className="ml-2 text-white">Substack</span>
+            <BookOpenIcon className="flex-auto h-5 w-5 item-center" />
+            <span className="flex-auto ml-2 text-sm sm:text-base text-white">Substack</span>
           </a>
         </div>
       </div>
