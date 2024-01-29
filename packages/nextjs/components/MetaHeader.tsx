@@ -14,9 +14,9 @@ type MetaHeaderProps = {
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/` : "/";
 
 export const MetaHeader = ({
-  title = "BuidlGuidl Batch#1 Buidlers Page",
-  description = "First dApp project built with the contributions of batch #1 members and supervised by the BuidlGuidl mentors. Stay with 🏗 Scaffold-ETH 2!",
-  image = "batch1_logo.png",
+  title = "Batch#1",
+  description = "Built by Buidl Guidl with 🏗 Scaffold-ETH 2!",
+  image = "batch1_logo4.png",
   twitterCard = "summary_large_image",
   children,
 }: MetaHeaderProps) => {
@@ -51,7 +51,7 @@ export const MetaHeader = ({
       <meta property="og:url" content="https://batch1.buidlguidl.com/" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="BuidlGuidl Batch#1" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/batch1_logo4.png" />
       {children}
     </Head>
   );
