@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { options } from "../components/particleOptionsTSX";
 import type { NextPage } from "next";
+import Particles from "react-tsparticles";
+import type { Engine } from "tsparticles-engine";
+import { loadSlim } from "tsparticles-slim";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
 import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
@@ -11,17 +15,32 @@ const Home: NextPage = () => {
     functionName: "checkedInCounter",
   });
 
+  type pInit = (engine: Engine) => Promise<void>;
+  const particlesInit: pInit = async engine => {
+    const result = await loadSlim(engine);
+    return result;
+  };
+
   return (
     <>
       <MetaHeader />
-      <div className="flex items-center flex-col flex-grow pt-10">
+      <Particles id="tsparticles" init={particlesInit} options={options} />
+      <div className="flex items-center flex-col flex-grow pt-10" style={{ zIndex: 1 }}>
         <div className="px-5">
           <h1 className="text-center mb-8">
             <span className="block text-2xl mb-2">Welcome to the</span>
             <span className="block text-4xl font-bold">Buidl Guidl Batch 1</span>
             <div className="flex items-center flex-col">
               <br></br>
-              <Image width={500} height={300} src="/batch1.jpg" alt="Batch1_Logo" className="mb-2 rounded-full" />
+              <Image
+                width={0}
+                height={0}
+                sizes="110vh"
+                style={{ width: "auto", height: "10%" }}
+                src="/batch1.jpg"
+                alt="Batch1_Logo"
+                className="mb-2 rounded-full"
+              />
             </div>
           </h1>
           <p className="text-center text-lg">Get started by taking a look at your batch GitHub repository.</p>
