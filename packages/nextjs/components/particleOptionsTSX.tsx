@@ -6,7 +6,7 @@ export const options: ISourceOptions = {
     zIndex: 0,
   },
   background: {
-    image: "linear-gradient(19deg, #FFFFFF 0%, #93BBFB 100%)",
+    image: "linear-gradient(19deg, #34EEB6 0%, #7F5AF0 100%)",
   },
   particles: {
     number: {
@@ -37,7 +37,7 @@ export const options: ISourceOptions = {
       },
     },
     opacity: {
-      value: 0.25,
+      value: 0.5,
       random: true,
       anim: {
         enable: false,

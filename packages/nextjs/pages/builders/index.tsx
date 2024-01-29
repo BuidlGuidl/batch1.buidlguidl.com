@@ -18,7 +18,7 @@ const BuilderPage: NextPage = () => {
   const builders = firstTimeCheckInEvents?.map(({ args: { builder } }) => builder);
 
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full flex justify-center items-center bg-gradient-to-r from-blue-500 to-purple-500">
       <div className="flex-col m-10 col-span-1 lg:col-span-2 flex flex-col gap-6">
         {error && <h3>Had a problem fetching builder data</h3>}
         <div className="z-10">
