@@ -8,11 +8,11 @@ module.exports = {
     themes: [
       {
         scaffoldEth: {
-          primary: "#93BBFB",
-          "primary-content": "#212638",
-          secondary: "#DAE8FF",
+          primary: "#7F5AF0", // Acidic purple
+          "primary-content": "#F9FBFF",
+          secondary: "#34EEB6", // Acidic blue
           "secondary-content": "#212638",
-          accent: "#93BBFB",
+          accent: "#FDD835", // Yellow
           "accent-content": "#212638",
           neutral: "#212638",
           "neutral-content": "#ffffff",
@@ -21,9 +21,9 @@ module.exports = {
           "base-300": "#DAE8FF",
           "base-content": "#212638",
           info: "#93BBFB",
-          success: "#177E5F",
+          success: "#34EEB6",
           warning: "#FFCF72",
-          error: "#E00000",
+          error: "#FF8863",
 
           "--rounded-btn": "9999rem",
 
@@ -40,16 +40,16 @@ module.exports = {
       },
       {
         scaffoldEthDark: {
-          primary: "#212638",
+          primary: "#3a10bb",
           "primary-content": "#F9FBFF",
-          secondary: "#323f61",
+          secondary: "#FDD835",
           "secondary-content": "#F9FBFF",
-          accent: "#4969A6",
+          accent: "#FDD835", // Brighter yellow
           "accent-content": "#F9FBFF",
           neutral: "#F9FBFF",
           "neutral-content": "#385183",
-          "base-100": "#385183",
-          "base-200": "#2A3655",
+          "base-100": "#3a10bb",
+          "base-200": "#212638",
           "base-300": "#212638",
           "base-content": "#F9FBFF",
           info: "#385183",
@@ -84,3 +84,4 @@ module.exports = {
     },
   },
 };
+
