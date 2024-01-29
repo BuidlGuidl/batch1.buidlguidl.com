@@ -21,16 +21,10 @@ const Home: NextPage = () => {
     return result;
   };
 
-  type pLoad = (container: any) => Promise<void>;
-  const particlesLoaded: pLoad = async container => {
-    const result = await console.log(container);
-    return result;
-  };
-
   return (
     <>
       <MetaHeader />
-      <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={options} />
+      <Particles id="tsparticles" init={particlesInit} options={options} />
       <div className="flex items-center flex-col flex-grow pt-10" style={{ zIndex: 1 }}>
         <div className="px-5">
           <h1 className="text-center mb-8">
