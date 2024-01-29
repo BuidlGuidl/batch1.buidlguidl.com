@@ -23,7 +23,7 @@ const Home: NextPage = () => {
               <Typewriter
                 onInit={typewriter => {
                   typewriter
-                    .typeString("Build Guidl Batch 1 🏗️")
+                    .typeString("Buidl Guidl Batch 1 🏗️")
                     .pauseFor(3000)
                     .deleteAll()
                     .typeString("Click Below to Start 💫")
