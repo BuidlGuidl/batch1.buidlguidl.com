@@ -6,7 +6,7 @@ const Dtnwen = () => {
   return (
     <div className="sm:flex px-8 sm:px-16 py-4">
       <div>
-        <div className="avatar ">
+        <div className="avatar">
           <div className="w-64 mask mask-hexagon">
             <Image width={500} height={500} src="/dtnwen.jpg" alt="Avatar" />
           </div>
