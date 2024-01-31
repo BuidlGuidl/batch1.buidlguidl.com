@@ -4,7 +4,7 @@ import { Address } from "~~/components/scaffold-eth";
 
 const Dtnwen = () => {
   return (
-    <div className="flex px-16 py-4">
+    <div className="sm:flex px-8 sm:px-16 py-4">
       <div>
         <div className="avatar">
           <div className="w-64 mask mask-hexagon">
@@ -37,7 +37,7 @@ const Dtnwen = () => {
       </div>
 
       <div className="ml-8">
-        <div className="flex">
+        <div className="sm:flex">
           <p className="text-6xl">DTNWEN</p>
           <div className="self-end py-5">
             <Address address="0x4f099cFbC4043e60c52EF47EBC593ba0Bda5C85e" format="long" />
@@ -52,7 +52,7 @@ const Dtnwen = () => {
         </div>
 
         <div className="flex">
-          <p className="text-base ml-4 text-justify">
+          <p className="text-base text-justify">
             Hi, I&apos;m DT. I have been self learning web3 development for a year. All I want is coding all the day and
             learn more new skills. I believe blockchain technology would change the world and that&apos;s why I&apos;m
             all in
